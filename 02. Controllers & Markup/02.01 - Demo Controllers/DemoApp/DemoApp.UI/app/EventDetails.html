@@ -33,7 +33,7 @@
                 </div><!-- /.navbar-collapse -->
             </div>
         </nav>
-        
+
         <div class="root-ng" ng-controller="EventController">
             <img ng-src="{{event.imageUrl}}" alt="{{event.name}}" />
             <div class="row">
@@ -43,9 +43,9 @@
             </div>
 
             <!--
-            
-                ** Demonstrando o uso de algumas diretivas **    
-            
+
+                ** Demonstrando o uso de algumas diretivas **
+
             <div class="well well-sm">
                 <button ng-disabled="buttonDisabled" class="btn btn-default">Disabled</button>
                 <div ng-bind-html="snippet">some title</div>
@@ -54,13 +54,14 @@
                 <div ng-non-bindable>{{1+2}} - desativando o binding</div>
             </div>
             -->
-
-
+            <!--
+                ** Demonstrando o uso de expressões
             <div class="well well-sm">
                 <h2>Expressões</h2>
                 <span>{{[1,2,3,4] [2]}}</span>
                 <span>{{myValue * 2 + 1}}</span>
             </div>
+                -->
 
 
 
@@ -86,7 +87,7 @@
 
             <h3 ng-class="myClass">Sessions</h3>
             <br />
-            
+
             <ul class="list-unstyled">
                 <li ng-repeat="session in event.sessions">
                     <div class="row">
@@ -94,7 +95,7 @@
                             <div ng-click="upVoteSession(session)">
                                 <i class="glyphicon glyphicon-chevron-up"></i>
                             </div>
-                                <span class="badge">{{session.upVoteCount}}</span>
+                            <span class="badge">{{session.upVoteCount}}</span>
                             <div ng-click="downVoteSession(session)">
                                 <i class="glyphicon glyphicon-chevron-down"></i>
                             </div>
