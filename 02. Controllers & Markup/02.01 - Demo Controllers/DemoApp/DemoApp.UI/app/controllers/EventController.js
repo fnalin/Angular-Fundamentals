@@ -20,6 +20,9 @@ eventsApp.controller('EventController',
         //Substitui o atributo do HTML5 que dependendo do browser pode ou não funcionar
         $scope.buttonDisabled = true;
 
+        //usado no html para demonstrar expressões
+        $scope.myValue = 10;
+
         //representa um obj evento
         $scope.event = {
             name: 'Angular Boot Camp',
