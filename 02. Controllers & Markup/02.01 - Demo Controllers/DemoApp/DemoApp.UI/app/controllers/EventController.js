@@ -3,7 +3,7 @@
 eventsApp.controller('EventController',
     function EventController($scope) {
 
-        //representa um evento
+        //representa um obj evento
         $scope.event = {
             name: 'Angular Boot Camp',
             date: '1/1/2013',
@@ -43,6 +43,17 @@ eventsApp.controller('EventController',
                     "upVoteCount": 0
                 }
             ],
+        };
+
+        //Evento Handler - setinha pra acima
+        $scope.upVoteSession = function (session) {
+                session.upVoteCount++;
+        };
+
+        //Evento Handler - setinha pra baixo
+        $scope.downVoteSession = function (session) {
+            if (session.upVoteCount > 0)
+                session.upVoteCount--;
         };
     }
 );

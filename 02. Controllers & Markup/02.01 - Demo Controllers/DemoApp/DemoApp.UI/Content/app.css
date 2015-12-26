@@ -2,6 +2,23 @@
     padding: 10px 20px;
 }
 
-ul.lista-sessions>li{
-    list-style-type:none;
+div.up-down-vote {
+    max-width: 45px;
+    padding: 10px;
+    margin-right: 10px;
 }
+
+    div.up-down-vote i {
+        top: 3px;
+        left: 6px;
+    }
+
+        div.up-down-vote i:hover {
+            cursor: pointer;
+        }
+
+    div.up-down-vote span {
+        position: relative;
+        left: -3px;
+        min-width:30px;
+    }
