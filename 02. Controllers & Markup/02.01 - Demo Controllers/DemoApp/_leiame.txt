@@ -5,4 +5,8 @@
 3. Instalar os pacotes baixo:
 	- bootstrap
 	- AngularJS.Core
-4. 
+4. Criar pasta app (Nossa aplicação FrontEnd estará aqui)
+5. Criar o arquivo app\EventDetails.html
+6. Criar o arquivo app\app.js (Nosso Módulo)
+7. Criar a pasta app\controllers
+8. Criar o Controller da página EventDetails: app\controllers\EventController.js
