@@ -42,10 +42,13 @@
                 </div>
             </div>
 
-
-            <div ng-bind-html="snippet">some title</div>
-            <div ng-show="boolValue">some title</div>
-            <div ng-hide="boolValue">some title</div>
+            <div class="well well-sm">
+                <button ng-disabled="buttonDisabled" class="btn btn-default">Disabled</button>
+                <div ng-bind-html="snippet">some title</div>
+                <div ng-show="boolValue">some title</div>
+                <div ng-hide="boolValue">some title</div>
+                <div ng-non-bindable>{{1+2}} - desativando o binding</div>
+            </div>
 
             <div class="row">
                 <div class="col-md-3">

@@ -16,6 +16,10 @@ eventsApp.controller('EventController',
         //variável que especifica uma classe e é consumida na view através do ng-class, ng-classeven ou ng-classodd
         $scope.myClass = "blue";
 
+        //ngDisabled = ngChecked = ngMultiple = ngReadonly = ngSelect
+        //Substitui o atributo do HTML5 que dependendo do browser pode ou não funcionar
+        $scope.buttonDisabled = true;
+
         //representa um obj evento
         $scope.event = {
             name: 'Angular Boot Camp',
