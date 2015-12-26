@@ -8,9 +8,10 @@
 4. Criar pasta app (Nossa aplicação FrontEnd estará aqui)
 5. Criar a subpasta js (os arquivos js da aplicação estarão aqui)
 6. Criar o arquivo app\EventDetails.html
-7. Criar o arquivo app\js\app.js (Nosso Módulo)
-8. Criar a pasta app\js\controllers
-9. Criar o Controller da página EventDetails: app\js\controllers\EventController.js
-10. Instalar o pacote p/ sanitize do HTML e referenciá-lo na página:
+7. Criar o arquivo _references.js em app\js (para o intelissense entre os js)
+8. Criar o arquivo app\js\app.js (Nosso Módulo)
+9. Criar a pasta app\js\controllers
+10. Criar o Controller da página EventDetails: app\js\controllers\EventController.js
+11. Instalar o pacote p/ sanitize do HTML e referenciá-lo na página:
 	- AngularJS.Sanitize
-11. Add a dependência ngSanitize no módulo
+12. Add a dependência ngSanitize no módulo
