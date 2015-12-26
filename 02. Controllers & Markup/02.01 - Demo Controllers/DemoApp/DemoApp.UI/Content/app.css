@@ -38,6 +38,14 @@ div.up-down-vote {
     color: blue;
 }
 
-div.sub-form{
-    margin-top:10px;
+div.sub-form {
+    margin-top: 10px;
+}
+
+input.ng-invalid.ng-dirty {
+    /*
+        No caso de estar inválido(invalid) e alterado(dirty)
+    */
+    border-color: red;
+    background-color: pink;
 }
