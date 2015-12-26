@@ -1,15 +1,22 @@
 ﻿'use strict';
 
 eventsApp.controller('EventController',
-    function EventController($scope, eventData) {
+    function EventController($scope, eventData, $log) {
 
         //variável usado no filtro da diretiva repeat (- decrescente)
         $scope.sortorder = 'name';
 
-        //representa um obj evento
-        eventData.getEvent(function (data) {
-            $scope.event = data;
-        });
+        //Chamando método do serviço que busca dados no servidor
+        eventData.getEvent()
+            .success(function (data, status, headers, config) {
+                //console.log(status);
+                //console.log(headers());
+                //console.log(config);
+                $scope.event = data;
+            })
+            .error(function (data, status, headers, config) {
+                $log.warn(data, status, headers, config);
+            });
 
         //Evento Handler - setinha pra acima
         $scope.upVoteSession = function (session) {
