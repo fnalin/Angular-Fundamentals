@@ -3,6 +3,7 @@
 eventsApp.controller('EventController',
     function EventController($scope) {
 
+        /*
         //permitido através do ngSanitize
         //obs.: a partir do 1.2 não existe a diretiva ng-html-unsafe, só a ng-html
         $scope.snippet = '<span style="color:red;">Exemplo de html não seguro p/ demonstrar o sanitize</span>';
@@ -22,6 +23,11 @@ eventsApp.controller('EventController',
 
         //usado no html para demonstrar expressões
         $scope.myValue = 10;
+        */
+
+
+        //variável usado no filtro da diretiva repeat (- decrescente)
+        $scope.sortorder = 'name';
 
         //representa um obj evento
         $scope.event = {

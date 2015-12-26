@@ -96,9 +96,25 @@
 
             <h3 ng-class="myClass">Sessions</h3>
             <br />
+            <div>
+                Order by:
+                <select ng-model="sortorder">
+                    <option value="name">Name</option>
+                    <option value="-upVoteCount">Vote</option>
+                </select>
+
+                Show:
+                <select ng-model="query.level">
+                    <option value="">All</option>
+                    <option value="introductory">Introductory</option>
+                    <option value="intermediate">Intermediate</option>
+                    <option value="advanced">Advanced</option>
+                </select>
+            </div>
+            <br />
 
             <ul class="list-unstyled">
-                <li ng-repeat="session in event.sessions">
+                <li ng-repeat="session in event.sessions | orderBy:sortorder | limitTo:10 | filter:query">
                     <div class="row">
                         <div class="col-sm-1 well up-down-vote">
                             <div ng-click="upVoteSession(session)">
