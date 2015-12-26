@@ -1,0 +1,51 @@
+﻿.root-ng {
+    padding: 10px 20px;
+}
+
+div.up-down-vote {
+    max-width: 45px;
+    padding: 10px;
+    margin-right: 10px;
+}
+
+    div.up-down-vote i {
+        top: 3px;
+        left: 6px;
+    }
+
+        div.up-down-vote i:hover {
+            cursor: pointer;
+        }
+
+    div.up-down-vote span {
+        position: relative;
+        left: -3px;
+        min-width: 30px;
+    }
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, x-ng.cloak {
+    /*  
+        preenche os bindings e depois exibe na tela
+        -- colocar o ng-cloak no body
+    */
+    display: none;
+}
+
+.blue {
+    /*
+        utilizado pela diretiva ng-myclass / variável no controller
+    */
+    color: blue;
+}
+
+div.sub-form {
+    margin-top: 10px;
+}
+
+input.ng-invalid.ng-dirty {
+    /*
+        No caso de estar inválido(invalid) e alterado(dirty)
+    */
+    border-color: red;
+    background-color: pink;
+}
