@@ -1,3 +1,7 @@
 ﻿.root-ng {
     padding: 10px 20px;
 }
+
+ul.lista-sessions>li{
+    list-style-type:none;
+}
