@@ -37,41 +37,9 @@
             <img ng-src="{{event.imageUrl}}" alt="{{event.name}}" />
             <div class="row">
                 <div class="col-md-12">
-                    <h2 ng-style="myStyle" ng-bind-template="{{event.name | uppercase }} - {{event.date}}"></h2>
+                    <h2>{{event.name | uppercase }}</h2>
                 </div>
             </div>
-
-            <!--
-
-                ** Demonstrando o uso de algumas diretivas **
-
-            <div class="well well-sm">
-                <button ng-disabled="buttonDisabled" class="btn btn-default">Disabled</button>
-                <div ng-bind-html="snippet">some title</div>
-                <div ng-show="boolValue">some title</div>
-                <div ng-hide="boolValue">some title</div>
-                <div ng-non-bindable>{{1+2}} - desativando o binding</div>
-            </div>
-            -->
-            <!--
-                ** Demonstrando o uso de expressões
-            <div class="well well-sm">
-                <h2>Expressões</h2>
-                <span>{{[1,2,3,4] [2]}}</span>
-                <span>{{myValue * 2 + 1}}</span>
-            </div>
-                -->
-            <!--
-                <h2>Filtros</h2>
-                <div class="well well-sm">
-                    {{3.1415926535 | number:2}}
-                    {{3 | number:2}}
-                    {{852.99 | currency}}
-                    {{1288323623006 | date:'medium'}}
-                    {{ {a:3,b:'hi',c:{aa:35} }  | json}}
-                </div>
-            -->
-
 
             <div class="row">
                 <div class="col-md-3">
@@ -148,6 +116,7 @@
 
     <script src="js/app.js"></script>
     <script src="js/controllers/EventController.js"></script>
+    <script src="js/services/EventData.js"></script>
     <script src="js/filters.js"></script>
 </body>
 </html>
