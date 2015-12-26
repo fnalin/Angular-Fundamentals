@@ -16,3 +16,4 @@
 	- AngularJS.Sanitize
 12. Add a dependência ngSanitize no módulo
 13. Criar pasta services em js (nossos serviços estarão aqui)
+14. Crie um novo projeto do tipo  C# / Web / Empty mais a referência à WebApi
