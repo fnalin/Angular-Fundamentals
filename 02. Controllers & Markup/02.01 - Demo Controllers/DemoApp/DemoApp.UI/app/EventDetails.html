@@ -38,7 +38,7 @@
             <img ng-src="{{event.imageUrl}}" alt="{{event.name}}" />
             <div class="row">
                 <div class="col-md-12">
-                    <h2 ng-style="myStyle" ng-bind-template="{{event.name}} - {{event.date}}"></h2>
+                    <h2 ng-style="myStyle" ng-bind-template="{{event.name | uppercase }} - {{event.date}}"></h2>
                 </div>
             </div>
 
@@ -63,6 +63,13 @@
             </div>
                 -->
 
+            <div class="well well-sm">
+                {{3.1415926535 | number:2}}
+                {{3 | number:2}}
+                {{852.99 | currency}}
+                {{1288323623006 | date:'medium'}}
+                {{ {a:3,b:'hi',c:{aa:35} }  | json}}
+            </div>
 
 
             <div class="row">
