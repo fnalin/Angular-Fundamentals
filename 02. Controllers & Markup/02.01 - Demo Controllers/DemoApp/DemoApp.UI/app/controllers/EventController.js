@@ -3,6 +3,19 @@
 eventsApp.controller('EventController',
     function EventController($scope) {
 
+        //permitido através do ngSanitize
+        //obs.: a partir do 1.2 não existe a diretiva ng-html-unsafe, só a ng-html
+        $scope.snippet = '<span style="color:red;">Exemplo de html não seguro p/ demonstrar o sanitize</span>';
+
+        //usando a diretiva ng-show / ng-hide
+        $scope.boolValue = true;
+
+        //usando prop. css no controller e consumindo na view com o ng-style
+        $scope.myStyle = { color: 'red' };
+
+        //variável que especifica uma classe e é consumida na view através do ng-class, ng-classeven ou ng-classodd
+        $scope.myClass = "blue";
+
         //representa um obj evento
         $scope.event = {
             name: 'Angular Boot Camp',

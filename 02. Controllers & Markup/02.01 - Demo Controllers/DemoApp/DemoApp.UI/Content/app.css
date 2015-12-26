@@ -20,5 +20,20 @@ div.up-down-vote {
     div.up-down-vote span {
         position: relative;
         left: -3px;
-        min-width:30px;
+        min-width: 30px;
     }
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, x-ng.cloak {
+    /*  
+        preenche os bindings e depois exibe na tela
+        -- colocar o ng-cloak no body
+    */
+    display: none;
+}
+
+.blue {
+    /*
+        utilizado pela diretiva ng-myclass / variável no controller
+    */
+    color: blue;
+}

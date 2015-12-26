@@ -10,3 +10,6 @@
 6. Criar o arquivo app\app.js (Nosso Módulo)
 7. Criar a pasta app\controllers
 8. Criar o Controller da página EventDetails: app\controllers\EventController.js
+9. Instalar o pacote p/ sanitize do HTML e referenciá-lo na página:
+	- AngularJS.Sanitize
+10. Add a dependência ngSanitize no módulo

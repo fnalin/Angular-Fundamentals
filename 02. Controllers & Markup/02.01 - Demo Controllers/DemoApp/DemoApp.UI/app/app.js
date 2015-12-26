@@ -1,3 +1,6 @@
 ﻿'use strict';
 
-var eventsApp = angular.module('eventsApp',[]);
+var eventsApp = angular.module('eventsApp', [
+    'ngSanitize' //permite html porém bloqueia o que considera inseguro
+
+]);
