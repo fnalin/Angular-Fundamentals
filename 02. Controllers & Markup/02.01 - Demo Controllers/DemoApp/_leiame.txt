@@ -6,10 +6,11 @@
 	- bootstrap
 	- AngularJS.Core
 4. Criar pasta app (Nossa aplicação FrontEnd estará aqui)
-5. Criar o arquivo app\EventDetails.html
-6. Criar o arquivo app\app.js (Nosso Módulo)
-7. Criar a pasta app\controllers
-8. Criar o Controller da página EventDetails: app\controllers\EventController.js
-9. Instalar o pacote p/ sanitize do HTML e referenciá-lo na página:
+5. Criar a subpasta js (os arquivos js da aplicação estarão aqui)
+6. Criar o arquivo app\EventDetails.html
+7. Criar o arquivo app\js\app.js (Nosso Módulo)
+8. Criar a pasta app\js\controllers
+9. Criar o Controller da página EventDetails: app\js\controllers\EventController.js
+10. Instalar o pacote p/ sanitize do HTML e referenciá-lo na página:
 	- AngularJS.Sanitize
-10. Add a dependência ngSanitize no módulo
+11. Add a dependência ngSanitize no módulo

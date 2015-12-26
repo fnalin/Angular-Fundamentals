@@ -76,8 +76,8 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="app\app.js" />
-    <Content Include="app\controllers\EventController.js" />
+    <Content Include="app\js\app.js" />
+    <Content Include="app\js\controllers\EventController.js" />
     <Content Include="app\EventDetails.html" />
     <Content Include="app\favicon.ico" />
     <Content Include="Content\app.css" />
