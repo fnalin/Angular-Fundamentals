@@ -1,0 +1,8 @@
+** Instruções deste projeto **
+
+1. Criar uma blank solution
+2. Criar um projeto C# / Web / Empty
+3. Instalar os pacotes baixo:
+	- bootstrap
+	- AngularJS.Core
+4. 
