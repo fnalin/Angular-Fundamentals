@@ -8,15 +8,18 @@ eventsApp.controller('EventController',
 
         //Chamando método do serviço que busca dados no servidor
         eventData.getEvent()
-            .success(function (data, status, headers, config) {
-                //console.log(status);
-                //console.log(headers());
-                //console.log(config);
-                $scope.event = data;
+            .$promise
+            .then(function (event) {
+                //sucesso
+                $scope.event = event;
+                //console.log(event);
             })
-            .error(function (data, status, headers, config) {
-                $log.warn(data, status, headers, config);
-            });
+            .catch(function (response) {
+                //caso de erro
+                console.log(response);
+            })
+        ;
+
 
         //Evento Handler - setinha pra acima
         $scope.upVoteSession = function (session) {

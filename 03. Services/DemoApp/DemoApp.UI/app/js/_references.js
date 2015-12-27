@@ -8,6 +8,7 @@
 /// <reference path="services/gravatarurlbuilder.js" />
 /// <reference path="../../Scripts/angular.js" />
 /// <reference path="../../Scripts/angular-mocks.js" />
+/// <reference path="../../scripts/angular-resource.min.js" />
 /// <reference path="../../Scripts/angular-sanitize.js" />
 /// <reference path="../../Scripts/bootstrap.js" />
 /// <reference path="../../Scripts/jquery-1.9.1.js" />
