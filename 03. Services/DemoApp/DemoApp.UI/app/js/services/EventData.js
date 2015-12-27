@@ -5,11 +5,15 @@
  * 
  */
 eventsApp.factory('eventData', function ($resource) {
+
+    var resource = $resource('http://localhost:62502/api/events/:id', { id: '@id' });
+
     return {
         getEvent: function () {
-            //return $http({ method: 'GET', url: 'http://localhost:62502/api/events/1' });
-            return $resource('http://localhost:62502/api/events/:id', { id: '@id' })
-                .get({ id: 1 });
+            return resource.get({ id: 1 });
+        },
+        save:function(event) {
+            return resource.save(event);
         }
     };
 });
