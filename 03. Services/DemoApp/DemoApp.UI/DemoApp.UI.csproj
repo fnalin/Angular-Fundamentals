@@ -66,7 +66,9 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="app\CacheSample.html" />
     <Content Include="app\EditProfile.html" />
+    <Content Include="app\js\controllers\CacheSampleController.js" />
     <Content Include="app\js\controllers\EditEventController.js" />
     <Content Include="app\js\controllers\EditProfileController.js" />
     <Content Include="app\js\filters.js" />
@@ -76,6 +78,7 @@
     <Content Include="app\data\event\4.json" />
     <None Include="app\js\_references.js" />
     <Content Include="app\js\services\EventData.js" />
+    <Content Include="app\js\services\ExCache.js" />
     <Content Include="app\js\services\GravatarUrlBuilder.js" />
     <Content Include="app\NewEvent.html" />
     <Content Include="img\profile.jpg" />

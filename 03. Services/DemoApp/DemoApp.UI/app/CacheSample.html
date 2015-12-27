@@ -1,7 +1,7 @@
 ﻿<!DOCTYPE html>
 <html lang="pt-br" ng-app="eventsApp">
 <head>
-    <title>New - Edit | Event</title>
+    <title>Cache Sample</title>
     <meta charset="utf-8" />
     <link rel="icon" href="favicon.ico" type="image/gif" sizes="16x16">
     <link href="../Content/bootstrap.min.css" rel="stylesheet" />
@@ -27,25 +27,58 @@
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
                         <li><a href="/app/EventDetails.html">Home</a></li>
-                        <li class="active"><a href="/app/NewEvent.html">Create Event <span class="sr-only">(current)</span></a></li>
+                        <li><a href="/app/NewEvent.html">Create Event</a></li>
                         <li><a href="/app/EditProfile.html">Edit Profile</a></li>
-                        <li><a href="/app/CacheSample.html">Cache Sample</a></li>
+                        <li class="active"><a href="/app/CacheSample.html">Cache Sample <span class="sr-only">(current)</span></a></li>
                     </ul>
                 </div><!-- /.navbar-collapse -->
             </div>
         </nav>
 
-        <div class="root-ng" ng-controller="EditEventController">
-            <h1>New Event</h1>
+        <div class="root-ng" ng-controller="CacheSampleController">
+            <h1>Cache Sample</h1>
             <hr />
-            <form name="newEventForm">
+
+            <div class="row">
+                <div class="form-group col-sm-3">
+                    <label for="key">Key:</label>
+                    <input id="key" ng-model="key" autofocus class="form-control" type="text" />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="form-group col-sm-3">
+                    <label for="value">Value:</label>
+                    <input id="value" ng-model="value" class="form-control" type="text" />
+                </div>
+            </div>
+
+            <div>
+                <button class="btn btn-default" ng-click="addToCache(key,value)">Add to Cache</button>
+            </div>
+
+            <hr />
+
+            <div class="form-inline row">
+                <div class="form-group">
+                    <label for="readKey">Key: </label>
+                    <input type="text" ng-model="keyToRead" class="form-control" id="readKey" placeholder="Obter Key">
+                </div>
+                <div class="form-group">
+                    <input type="text" readonly class="form-control text-center" value="{{ readFromCache(keyToRead) }}">
+                </div>
+            </div>
+
+            <hr />
+
+            <div class="well well-sm">
+                <p>Value from cache: {{ readFromCache(keyToRead) }}</p>
+                <p>CacheStatus: {{ getCacheStatus(keyToRead) }}</p>
+            </div>
+
+            <!--<form name="newEventForm">
                 <fieldset>
-                    <div class="row">
-                        <div class="form-group col-sm-6">
-                            <label for="eventName">Event Name:</label>
-                            <input id="eventName" required ng-model="event.name" autofocus class="form-control" placeholder="Name of your event..." type="text" />
-                        </div>
-                    </div>
+
 
                     <div class="row">
                         <div class="form-group col-sm-6">
@@ -91,7 +124,7 @@
 
                 <button type="submit" ng-disabled="newEventForm.$invalid" ng-click="saveEvent(event,newEventForm)" class="btn btn-primary">Save</button>
                 <button type="button" ng-click="cancelEdit()" class="btn btn-default">Cancel</button>
-            </form>
+            </form>-->
         </div>
 
 
@@ -107,8 +140,8 @@
     <script src="../Scripts/angular-resource.js"></script>
 
     <script src="js/app.js"></script>
-    <script src="js/services/EventData.js"></script>
-    <script src="js/controllers/EditEventController.js"></script>
+    <script src="js/services/ExCache.js"></script>
+    <script src="js/controllers/CacheSampleController.js"></script>
     <script src="js/filters.js"></script>
 </body>
 </html>
