@@ -1,0 +1,15 @@
+﻿body{
+    padding:10px;
+}
+img{
+    width:10px;
+    margin:5px
+}
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, x-ng.cloak {
+    /*  
+        preenche os bindings e depois exibe na tela
+        -- colocar o ng-cloak no body
+    */
+    display: none;
+}
